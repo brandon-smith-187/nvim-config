@@ -1,0 +1,5 @@
+{
+"symbol-line.default": "%f",
+"symbol-line.icons": true,
+"symbol-line.separator": " > "
+}
