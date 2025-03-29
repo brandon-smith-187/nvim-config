@@ -50,16 +50,8 @@ git clone https://github.com/brandon-smith-187/nvim-config.git "${XDG_CONFIG_HOM
 
 Windows
 
-If you're using `cmd.exe`:
-
 ```
-git clone https://github.com/brandon-smith-187/nvim-config.git "%localappdata%\nvim"
-```
-
-If you're using `powershell.exe`
-
-```
-git clone https://github.com/brandon-smith-187/nvim-config.git "${env:LOCALAPPDATA}\nvim"
+git clone https://github.com/brandon-smith-187/nvim-config.git "${LOCALAPPDATA}\nvim"
 ```
 
 
