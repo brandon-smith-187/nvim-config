@@ -5,15 +5,8 @@ return {
 	dependencies = {
 		'williamboman/mason.nvim',  -- Package manager for LSP servers, linters etc.
 		'hrsh7th/cmp-nvim-lsp',  -- Enhances autocompletion for nvim-cmp
-		{ 'antosha417/nvim-lsp-file-operations', config = true },  -- File operations via LSP (rename, move etc.)
-		{ 'folke/neodev.nvim', opts = {} },  -- Improves LSP for Neovim Lua development
-	},
+		'WhoIsSethDaniel/mason-tool-installer.nvim',},
 	config = function()
-		local lspconfig = require('lspconfig')
-		local mason_lspconfig = require('mason-lspconfig')
-		local cmp_nvim_lsp = require('cmp_nvim_lsp')
-		local keymap = vim.keymap
-
 		-- Custom keybinds when LSP server attaches to buffer
 		vim.api.nvim_create_autocmd('LspAttach', {
 			group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
@@ -196,7 +189,7 @@ return {
 							-- yapf = { enabled = false },
 							-- linter options
 							pylint = {
-								enabled = true, 
+								enabled = true,
 								executable = "pylint",
 								args = {"max-line-length = 120"}
 							},
@@ -236,7 +229,11 @@ return {
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
 			'stylua', -- Used to format Lua code
-		})
+			'prettier',
+			'isort',
+			'cfn-lint',
+			'black'
+			})
 		require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
 		require('mason-lspconfig').setup {
@@ -253,63 +250,5 @@ return {
 			end,
 			},
 		}
-
-		-- -- Specify handlers
-		-- mason_lspconfig.setup_handlers({
-		-- 	function(server_name)
-		-- 		lspconfig[server_name].setup({
-		-- 			capabilities = capabilities,
-		-- 			-- handlers = no_diagnostics,   -- Disable diagnostics
-		-- 		})
-		-- 	end,
-
-
-		-- 	-- Lua LSP
-		-- 	['lua_ls'] = function()
-		-- 		lspconfig.lua_ls.setup({
-		-- 			capabilities = capabilities,
-		-- 			handlers = no_diagnostics,
-		-- 			settings = {
-		-- 				Lua = {
-		-- 					diagnostics = { globals = { 'vim' } },
-		-- 					completion = { callSnippet = 'Replace' },
-		-- 				},
-		-- 			},
-		-- 		})
-		-- 	end,
-
-		-- 	-- Python LSP
-		-- 	['pylsp'] = function()
-		-- 		lspconfig.pylsp.setup({
-		-- 			capabilities = capabilities,
-		-- 			handlers = no_diagnostics,
-		-- 			settings = {
-		-- 				pylsp = {
-		-- 					-- Disable Python linters
-		-- 					plugins = {
-		-- 						pycodestyle = { enabled = false },
-		-- 						pyflakes    = { enabled = false },
-		-- 						pylint      = { enabled = false },
-		-- 						mccabe      = { enabled = false },
-		-- 						rope_completion = { enabled = false },
-		-- 					},
-		-- 				},
-		-- 			},
-		-- 		})
-		-- 	end,
-
-		-- 	-- C LSP
-		-- 	['clangd'] = function()
-		-- 		lspconfig.clangd.setup({
-		-- 			capabilities = capabilities,
-		-- 			handlers = no_diagnostics,
-		-- 			settings = {
-		-- 				clangd = {
-		-- 					fallbackFlags = { "-std=c11" },  -- Example: Set C standard
-		-- 				},
-		-- 			},
-		-- 		})
-		-- 	end,
-		-- })
 	end
 }
