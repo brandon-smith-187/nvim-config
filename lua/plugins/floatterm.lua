@@ -7,6 +7,7 @@ return {
       vim.g.floaterm_keymap_prev   = '<F8>'
       vim.g.floaterm_keymap_next   = '<F9>'
       vim.g.floaterm_keymap_toggle = '<F12>'
+      vim.g.floaterm_shell         = 'bash'
     end,
     config = function()
       vim.api.nvim_create_autocmd('FileType', {
