@@ -54,4 +54,3 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set("n", "g/", ":noh<CR>")
 
 vim.keymap.set('n', '<F8>', ':TagbarToggle<CR>', { desc = 'Toggle tagbar with F8' })
-vim.keymap.set('n', '<Tab>', ':NvimTreeToggle<CR>', { desc = 'Toggle NvimTree with Tab' })

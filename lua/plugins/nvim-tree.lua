@@ -5,9 +5,6 @@ return {
     local nvim_tree = require("nvim-tree")
     local api = require("nvim-tree.api")
 
-    vim.g.loaded_netrw = 1
-    vim.g.loaded_netrwPlugin = 1
-
     nvim_tree.setup({
       sync_root_with_cwd = true,
       respect_buf_cwd = true,
@@ -22,8 +19,8 @@ return {
       },
     })
 
-    vim.keymap.set("n", "<leader>e", function()
-      api.tree.toggle({ find_file = true, update_root = true, focus = true })
+    vim.keymap.set("n", "<Tab>", function()
+      api.tree.toggle({ find_file = true, update_root = true, focus = false })
     end, { noremap = true, silent = true })
 
     -- vim.keymap.set("n", "<C-t>", function()
@@ -31,7 +28,5 @@ return {
     -- end, { noremap = true, silent = true })
 
     -- vim.keymap.set("n", "t", api.node.open.tab, { noremap = true, silent = true })
-    
   end,
 }
-
