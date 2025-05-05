@@ -54,4 +54,7 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- vim.keymap.set("n", "g/", ":noh<CR>")
 
 vim.keymap.set("n", "<F8>", ":TagbarToggle<CR>", { desc = "Toggle tagbar with F8" })
+<<<<<<< HEAD
 vim.keymap.set("n", "<F11>", ":AerialToggle<CR>", { desc = "Toggle aerial with F11" })
+=======
+>>>>>>> d7f734c (added lsps)

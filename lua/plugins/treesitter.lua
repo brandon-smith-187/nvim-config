@@ -34,6 +34,7 @@ return {
 				'go',
 				'cpp',
 				'asm',
+				'dockerfile'
 			},
 			ignore_install = {},
 			-- Incremental and decremental selection (C-Space and BS)
