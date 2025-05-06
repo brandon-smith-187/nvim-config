@@ -1,6 +1,6 @@
 -- vim.cmd.colorscheme("onedark")
-vim.cmd.colorscheme("vscode")
-
+-- vim.cmd.colorscheme("vscode")
+vim.cmd.colorscheme("tokyonight")
 -- Custom colors
 -- vim.api.nvim_set_hl(0, "Normal",      { bg = "#1E2127" })
 -- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "#1E2127" })
