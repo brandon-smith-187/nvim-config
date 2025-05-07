@@ -4,8 +4,8 @@ return {
 		"voldikss/vim-floaterm",
 		init = function()
 			--vim.g.floaterm_keymap_new    = '<F7>'
-			vim.g.floaterm_keymap_prev = "<F8>"
-			vim.g.floaterm_keymap_next = "<F9>"
+			-- vim.g.floaterm_keymap_prev = "<F8>"
+			-- vim.g.floaterm_keymap_next = "<F9>"
 			vim.g.floaterm_keymap_toggle = "<F12>"
 			local getOS = require("config.getOS")
 			if getOS.getName() == "Windows" then
@@ -30,7 +30,7 @@ return {
 					)
 				end,
 			})
-			vim.api.nvim_set_keymap("n", "<F7>", ":FloatermNew bash<CR>", { noremap = true, silent = true })
+			-- vim.api.nvim_set_keymap("n", "<F7>", ":FloatermNew bash<CR>", { noremap = true, silent = true })
 		end,
 	},
 }

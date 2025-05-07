@@ -210,11 +210,11 @@ return {
 							-- autopep8 = { enabled = false },
 							-- yapf = { enabled = false },
 							-- linter options
-							pylint = {
-								enabled = true,
-								executable = "pylint",
-								args = { "max-line-length = 120" },
-							},
+							-- pylint = {
+							-- 	enabled = true,
+							-- 	executable = "pylint",
+							-- 	args = { "max-line-length = 120" },
+							-- },
 							pyflakes = { enabled = true },
 							pycodestyle = {
 								enabled = true,
@@ -225,7 +225,7 @@ return {
 							-- auto-completion options
 							jedi_completion = { fuzzy = true },
 							-- import sorting
-							pyls_isort = { enabled = true },
+							pyls_isort = { enabled = true, profile = "black" },
 						},
 					},
 				},
@@ -238,11 +238,11 @@ return {
 				},
 			},
 			dockerls = {
-				filetypes={"Dockerfile"}
+				filetypes = { "Dockerfile" },
 			},
 			asm_lsp = {},
 			bashls = {},
-			cmake = {},
+			cmake = { filetypes = { "cmake", "Makefile" } },
 			gopls = {},
 			helm_ls = {},
 			jsonls = {},
