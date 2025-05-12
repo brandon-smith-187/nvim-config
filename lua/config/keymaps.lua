@@ -56,3 +56,6 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 vim.keymap.set("n", "<F2>", ":w<CR>", { desc = "save from insert mode with F2" })
 vim.keymap.set("n", "<F11>", ":AerialToggle<CR>", { desc = "Toggle aerial with F11" })
 vim.keymap.set("n", "<F8>", ":AerialToggle<CR>|:NvimTreeToggle<CR>", { desc = "Toggle aerial and tagbar with F8" })
+vim.keymap.set("n", "<F5>", ":TermExec cmd='go run %'<CR>", { desc = "Run current file in go" })
+vim.keymap.set("n", "<F6>", ":TermExec cmd='python %'<CR>", { desc = "Run current file in python" })
+vim.keymap.set("n", "<F6>", ":TermExec cmd='python'<CR>", { desc = "Open python interpreter" })
