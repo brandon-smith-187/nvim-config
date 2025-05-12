@@ -58,4 +58,4 @@ vim.keymap.set("n", "<F11>", ":AerialToggle<CR>", { desc = "Toggle aerial with F
 vim.keymap.set("n", "<F8>", ":AerialToggle<CR>|:NvimTreeToggle<CR>", { desc = "Toggle aerial and tagbar with F8" })
 vim.keymap.set("n", "<F5>", ":TermExec cmd='go run %'<CR>", { desc = "Run current file in go" })
 vim.keymap.set("n", "<F6>", ":TermExec cmd='python %'<CR>", { desc = "Run current file in python" })
-vim.keymap.set("n", "<F6>", ":TermExec cmd='python'<CR>", { desc = "Open python interpreter" })
+vim.keymap.set("n", "<F7>", ":TermExec cmd='python'<CR>", { desc = "Open python interpreter" })
