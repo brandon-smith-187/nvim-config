@@ -36,6 +36,7 @@ return {
 				"asm",
 				"dockerfile",
 				"terraform",
+				"hcl",
 			},
 			ignore_install = {},
 			-- Incremental and decremental selection (C-Space and BS)

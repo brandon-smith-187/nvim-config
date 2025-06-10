@@ -252,6 +252,7 @@ return {
 				filetypes = { "terraform", "terraform-vars" },
 				root_markers = { ".terraform", ".git" },
 			},
+			tflint = {},
 			yamlls = {},
 		}
 
@@ -267,6 +268,7 @@ return {
 			"json-lsp",
 			"terraform-ls",
 			"terraform",
+			"tflint",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
