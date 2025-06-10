@@ -247,7 +247,11 @@ return {
 			helm_ls = {},
 			jsonls = {},
 			sqls = {},
-			terraformls = {},
+			terraformls = {
+				cmd = { "terraform-ls", "serve" },
+				filetypes = { "terraform", "terraform-vars" },
+				root_markers = { ".terraform", ".git" },
+			},
 			yamlls = {},
 		}
 
@@ -261,6 +265,8 @@ return {
 			"lua-language-server",
 			"bash-language-server",
 			"json-lsp",
+			"terraform-ls",
+			"terraform",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

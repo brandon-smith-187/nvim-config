@@ -1,17 +1,17 @@
 -- Syntax highlighting
 return {
 	"nvim-treesitter/nvim-treesitter",
-	event = { "BufReadPre", "BufNewFile" },  -- Lazy loading
-	build = ":TSUpdate",  -- Ensure parsers up to date
+	event = { "BufReadPre", "BufNewFile" }, -- Lazy loading
+	build = ":TSUpdate", -- Ensure parsers up to date
 	dependencies = {
 		"windwp/nvim-ts-autotag",
 	},
 	config = function()
-		local treesitter = require('nvim-treesitter.configs')
+		local treesitter = require("nvim-treesitter.configs")
 
 		treesitter.setup({
-			auto_install = true,  -- Automatically install parsers for missing languages
-			sync_install = false,  -- Disable synchronous parser installation to avoid blocking
+			auto_install = true, -- Automatically install parsers for missing languages
+			sync_install = false, -- Disable synchronous parser installation to avoid blocking
 			-- Enable highlighting, indenting, auto-tagging based on tree-sitter
 			highlight = {
 				enable = true,
@@ -21,33 +21,33 @@ return {
 			autotag = { enable = true },
 			-- Parsers for specific languages
 			ensure_installed = {
-				'json',
-				'yaml',
-				'markdown',
-				'markdown_inline',
-				'bash',
-				'lua',
-				'vim',
-				'python',
-				'gitignore',
-				'c',
-				'go',
-				'cpp',
-				'asm',
-				'dockerfile'
+				"json",
+				"yaml",
+				"markdown",
+				"markdown_inline",
+				"bash",
+				"lua",
+				"vim",
+				"python",
+				"gitignore",
+				"c",
+				"go",
+				"cpp",
+				"asm",
+				"dockerfile",
+				"terraform",
 			},
 			ignore_install = {},
 			-- Incremental and decremental selection (C-Space and BS)
 			incremental_selection = {
 				enable = true,
 				keymaps = {
-					init_selection = '<C-Space>',
-					node_incremental = '<C-Space>',
+					init_selection = "<C-Space>",
+					node_incremental = "<C-Space>",
 					scope_incremental = false,
-					node_decremental = '<bs>',
+					node_decremental = "<bs>",
 				},
 			},
 		})
 	end,
 }
-
