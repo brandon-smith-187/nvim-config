@@ -1,7 +1,9 @@
 return {
+	"rebelot/kanagawa.nvim",
 	"tpope/vim-surround", -- Surround plugin
 	"tpope/vim-commentary", -- Commentary plugin
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
+	-- "nvim-lualine/lualine.nvim",
 	{
 		"folke/todo-comments.nvim",
 		event = "VimEnter",

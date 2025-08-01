@@ -171,10 +171,6 @@ return {
 		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 		local servers = {
-			-- clangd = {},
-			-- gopls = {},
-			-- pyright = {},
-			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
 			-- Some languages (like typescript) have entire language plugins that can be useful:
@@ -198,38 +194,41 @@ return {
 					},
 				},
 			},
-			pylsp = {
-				settings = {
-					pylsp = {
-						plugins = {
-							-- formatter options
-							black = {
-								enabled = true,
-								-- line-length = 120,
-							},
-							-- autopep8 = { enabled = false },
-							-- yapf = { enabled = false },
-							-- linter options
-							-- pylint = {
-							-- 	enabled = true,
-							-- 	executable = "pylint",
-							-- 	args = { "max-line-length = 120" },
-							-- },
-							pyflakes = { enabled = true },
-							pycodestyle = {
-								enabled = true,
-								maxLineLength = 120,
-							},
-							-- type checker
-							pylsp_mypy = { enabled = true },
-							-- auto-completion options
-							jedi_completion = { fuzzy = true },
-							-- import sorting
-							pyls_isort = { enabled = true, profile = "black" },
-						},
-					},
-				},
-			},
+			-- pylsp = {
+			-- 	settings = {
+			-- 		pylsp = {
+			-- 			plugins = {
+			-- 				-- formatter options
+			-- 				black = {
+			-- 					enabled = true,
+			-- 					-- line-length = 120,
+			-- 				},
+			-- 				-- autopep8 = { enabled = false },
+			-- 				-- yapf = { enabled = false },
+			-- 				-- linter options
+			-- 				pylint = {
+			-- 					enabled = false,
+			-- 					executable = "pylint",
+			-- 					args = { "max-line-length = 120" },
+			-- 				},
+			-- 				mccabe = { enabled = false },
+			-- 				pyflakes = { enabled = false },
+			-- 				pycodestyle = {
+			-- 					enabled = true,
+			-- 					maxLineLength = 120,
+			-- 					ignore = { "W391" },
+			-- 				},
+			-- 				-- type checker
+			-- 				pylsp_mypy = { enabled = true },
+			-- 				-- auto-completion options
+			-- 				jedi_completion = { fuzzy = true },
+			-- 				-- import sorting
+			-- 				pyls_isort = { enabled = true, profile = "black" },
+			-- 			},
+			-- 		},
+			-- 	},
+			-- },
+			pyright = {},
 			clangd = {
 				settings = {
 					clangd = {
