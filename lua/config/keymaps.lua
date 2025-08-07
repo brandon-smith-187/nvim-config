@@ -54,7 +54,8 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- vim.keymap.set("n", "g/", ":noh<CR>")
 
 vim.keymap.set("n", "<F2>", ":w<CR>", { desc = "save from insert mode with F2" })
-vim.keymap.set("n", "<F11>", ":AerialToggle<CR>", { desc = "Toggle aerial with F11" })
+vim.keymap.set("n", "<F11>", ":vsplit<CR>", { desc = "Toggle aerial with F11" })
+vim.keymap.set("n", "<Delete>", ":q<CR>", { desc = "Quit with Delete" })
 vim.keymap.set("n", "<F10>", ":GoPkgOutline<CR>", { desc = "Get Package outline in go file with F10" })
 vim.keymap.set("n", "<F9>", ":GoDoc<CR>", { desc = "Open Go Docs with F9" })
 vim.keymap.set("n", "<F5>", ":TermExec cmd='go run %'<CR>", { desc = "Run current file in go" })

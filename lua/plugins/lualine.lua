@@ -79,7 +79,7 @@ local colors = {
 		local config = {
 			options = {
 				-- Disable sections and component separators
-				disabled_filetypes = { "NvimTree", "aerial" },
+				disabled_filetypes = { "neo-tree" },
 				component_separators = "",
 				section_separators = "",
 				theme = {

@@ -8,7 +8,7 @@ return {
 		bufferline.setup({
 			options = {
 				themable = true,
-				separator_style = "slant",
+				separator_style = "|",
 				persist_buffer_sort = true,
 				hover = {
 					enabled = true,
@@ -17,7 +17,7 @@ return {
 				},
 				offsets = {
 					{
-						filetype = "NvimTree",
+						filetype = "neo-tree",
 						text = "File Explorer",
 						highlight = "Directory",
 						separator = true,
