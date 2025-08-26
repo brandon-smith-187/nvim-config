@@ -11,7 +11,7 @@ return {
 	},
 	lazy = false,
 	keys = {
-		{ "\\", ":Neotree reveal<CR>", desc = "NeoTree reveal", silent = true },
+		{ "\\", ":Neotree toggle<CR>", desc = "NeoTree show", silent = true },
 	},
 	opts = {
 		filesystem = {
@@ -20,7 +20,21 @@ return {
 					["\\"] = "close_window",
 				},
 			},
-			filtered_items = { hide_hidden = false, visible = true },
+			filtered_items = {
+				hide_hidden = false,
+				visible = true,
+				never_show = {
+					".DS_Store",
+				},
+			},
+			renderers = {
+				file = {
+					{ "icon" },
+					{ "name", use_git_status_colors = true },
+					{ "diagnostics" },
+					{ "git_status", highlight = "NeoTreeDimText" },
+				},
+			},
 		},
 	},
 }
