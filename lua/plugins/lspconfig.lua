@@ -193,7 +193,7 @@ return {
 							-- yapf = { enabled = false },
 							-- linter options
 							pylint = {
-								enabled = false,
+								enabled = true,
 								executable = "pylint",
 								args = { "max-line-length = 120" },
 							},
@@ -202,7 +202,7 @@ return {
 							pycodestyle = {
 								enabled = true,
 								maxLineLength = 120,
-								ignore = { "W391" },
+								ignore = { "W391", "W503", "E266", "E722" },
 							},
 							-- type checker
 							pylsp_mypy = { enabled = true },

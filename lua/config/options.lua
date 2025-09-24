@@ -82,3 +82,9 @@ vim.filetype.add({
 		tf = "terraform",
 	},
 })
+
+vim.opt.foldmethod = "syntax" -- or "indent"
+vim.opt.foldlevelstart = 99 -- start with all folds open
+vim.g.python3_host_prog = "/Users/brandon.smith/.pyenv/versions/neovim/bin/python"
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
