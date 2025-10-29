@@ -187,6 +187,7 @@ return {
 							-- formatter options
 							black = {
 								enabled = true,
+								prepend_args = { "--fast" },
 								-- line-length = 120,
 							},
 							-- autopep8 = { enabled = false },
@@ -202,7 +203,7 @@ return {
 							pycodestyle = {
 								enabled = true,
 								maxLineLength = 120,
-								ignore = { "W391", "W503", "E266", "E722" },
+								ignore = { "W391", "W503", "E266", "E722", "E402" },
 							},
 							-- type checker
 							pylsp_mypy = { enabled = true },
