@@ -17,6 +17,7 @@ sudo apt install python3-neovim
 sudo apt install python3-dev python3-pip
 sudo apt install nodejs
 sudo apt install npm
+sudo apt install fontconfig
 
 wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip \
 && cd ~/.local/share/fonts \
