@@ -14,7 +14,7 @@ uv tool install --upgrade pynvim
 
 sudo apt install golang-go
 sudo apt install python3-neovim
-sudo apt install python-dev python-pip
+sudo apt install python3-dev python3-pip
 sudo apt install nodejs
 sudo apt install npm
 
